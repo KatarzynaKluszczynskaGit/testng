@@ -1,0 +1,5 @@
+.gradle
+.idea
+Build
+**/desktop.ini
+desktop.ini

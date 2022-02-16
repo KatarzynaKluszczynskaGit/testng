@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'org.testng', name: 'testng', version: '7.5'
+}
+
+test {
+    def groups = System.getProperty('groups', 'smoke')
+    useTestNG() {
+        includeGroups groups
+    }
+}
+
+task hello {
+    doLast {
+        println 'tutorialspoint'
+    }
+}
