@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="suite1"  >
+    <test name="Selected form FirstTests" >
+        <classes>
+            <class name ="FirstTests">
+                <methods>
+                    <include name="testFirst" />
+                    <include name="testSecond" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="All from SecondTests" >
+        <classes>
+            <class name ="SecondTests" />
+        </classes>
+    </test>
+</suite>
