@@ -20,8 +20,33 @@ test {
     }
 }
 
-task hello {
-    doLast {
-        println 'tutorialspoint'
+task testFirstTests(type: Test) {
+    useTestNG() {
+        include '**/FirstTests*'
+    }
+}
+
+task testSecondTests(type: Test) {
+    useTestNG() {
+        include '**/SecondTests*'
+    }
+}
+
+task testG1(type: Test) {
+    useTestNG() {
+        includeGroups 'g1'
+    }
+}
+
+task testNotG2(type: Test) {
+    useTestNG() {
+        excludeGroups 'g2'
+    }
+}
+
+task testWithName(type: Test) {
+    useTestNG() {
+        include '**/**test*'
+    }
     }
 }
