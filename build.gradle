@@ -48,5 +48,4 @@ task testWithName(type: Test) {
     useTestNG() {
         include '**/**test*'
     }
-    }
 }
