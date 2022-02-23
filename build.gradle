@@ -22,13 +22,13 @@ test {
 
 task testFirstTests(type: Test) {
     useTestNG() {
-        include '**/FirstTests.class'
+        include '**/FirstTests*'
     }
 }
 
 task testSecondTests(type: Test) {
     useTestNG() {
-        include '**/SecondTests.class'
+        include '**/SecondTests*'
     }
 }
 
@@ -46,8 +46,7 @@ task testNotG2(type: Test) {
 
 task testWithName(type: Test) {
     useTestNG() {
-        filter{
-            includeTestsMatching '*Fifth*'
-        }
+        include '**/**test*'
+    }
     }
 }
