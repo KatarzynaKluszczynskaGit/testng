@@ -1,3 +1,4 @@
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.security.SecureRandom;
@@ -5,6 +6,7 @@ import java.util.Random;
 
 import static org.testng.AssertJUnit.assertEquals;
 
+@Listeners(Listener.class)
 public class FirstTests {
 
     @Test(groups = "g1")

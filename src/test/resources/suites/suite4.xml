@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="suite4"  >
+    <listeners>
+        <listener class-name="Listener"/>
+    </listeners>
+    <test name="All except g1" >
+        <groups>
+            <run>
+                <exclude name="g1" />
+            </run>
+        </groups>
+
+        <classes>
+            <class name="FirstTests" />
+            <class name="SecondTests" />
+            <class name="TestNGTests" />
+        </classes>
+    </test>
+</suite>
